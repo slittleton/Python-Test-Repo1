@@ -1,0 +1,114 @@
+============================
+= PYTHON ENVIRONMENT SETUP =
+============================
+
+--------------------------------------------------
+
+NOTE 1: DO NOT PUT PROJECT FILES IN THE VIRTUAL ENVIRONMENT FOLDER
+instead, leave the project files just outside of the env folder (ie in your project folder)
+The environment should be something that can be thrown away and rebuilt
+Also do not commit your virtual enviorment to source control
+You SHOULD commit your requirements.txt file so you can rebuild the env based on it (like package.json for js)
+
+
+NOTE 2: to install packages from requirements.txt (after you setup your virtual environment)
+
+
+	pip3 install -r requirements.txt
+
+--------------------------------------------------------
+
+
+=============================
+= VIRTUAL ENVIRONMENT SETUP =
+=============================
+
+1) install virtual evironment package
+
+	sudo pip3 install virtualenv
+
+2) Create a new virtual environment in project folder
+
+	virtualenv  <envName>
+
+3) start virtual environment
+
+	source <envName>/bin/activate
+
+4) you should see the name of the virtual environment show on the left side in the terminal line
+
+	(envName) computer@name:~/folder1/projfolder
+
+5) you can now install packages specific to your project using pip3
+
+	pip3 install pandas
+
+6) to Deactivte virtual environment
+
+	deactivate
+
+
+
+ALTERNATE METHOD-----
+
+1) create project folder
+
+	mkdir <folder name>
+
+2) Change directory to folder
+
+	cd <folder name>
+
+3) Create virtual environment 
+
+	python3 -m venv testing
+
+4) change directory to the virtual environment BIN folder
+
+	cd  <virtual environment folder name>/bin
+
+
+5) activate virtual environment
+
+	source ./activate
+
+
+
+
+============================
+= GITHUB REPOSITORY SETUP =
+============================
+1) create github repo with python as gitignore template
+
+
+
+
+
+
+
+==================================
+= GENERATE requirements.txt FILE = 
+==================================
+1) install pipreqs
+
+	pip3 install pipreqs
+
+2) generate requirements.txt (make sure to delete original requriements.txt file first)
+	
+	python3 -m pipreqs.pipreqs .
+
+
+
+--- Alternate Method
+
+1) use pip freeze
+
+	pip freeze > requirements.txt
+
+
+
+---- Check installed pip packages
+
+	pip list
+
+
